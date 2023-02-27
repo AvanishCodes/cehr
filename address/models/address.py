@@ -12,9 +12,11 @@ class Address(models.Model):
     city = models.ForeignKey(
         City,
         on_delete=models.CASCADE,
+        null=True,
     )
     state = models.ForeignKey(
         State,
         on_delete=models.CASCADE,
+        null=True,
     )
-    pincode = models.CharField(max_length=10)
+    pincode = models.CharField(max_length=10, null=True, blank=True)

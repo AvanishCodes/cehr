@@ -14,8 +14,51 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+
+# from rest_framework.authtoken.views import obtain_auth_token
+from rest_framework import permissions
+from rest_framework.schemas import get_schema_view
+from drf_yasg.views import get_schema_view as gsv
+from drf_yasg import openapi
+
+schema_view = gsv(
+    openapi.Info(
+        title="Community EHR Solutions",
+        default_version='v0.1',
+        description="EHR Service API Documentation",
+        terms_of_service="https://github.com/AvanishCodes/cehr/blob/main/LICENSE.md",
+        contact=openapi.Contact(email="avanishcodes@gmail.com"),
+        license=openapi.License(name="MIT License"),
+    ),
+    public=True,
+    permission_classes=[permissions.AllowAny],
+)
 
 urlpatterns = [
+    # Admin Panel
     path('admin/', admin.site.urls),
+    # API Documentation
+    path(
+        '',
+        schema_view.with_ui(
+            'swagger',
+            cache_timeout=0
+        ),
+        name='schema-swagger-ui'
+    ),
+    path(
+        'redoc/',
+        schema_view.with_ui(
+            'redoc',
+            cache_timeout=0
+        ),
+        name='schema-redoc'
+    ),
+    # Monitoring
+    path('', include('django_prometheus.urls')),
+
+    # Django Application Modules
+    path('address/', include('address.urls')),
+
 ]
