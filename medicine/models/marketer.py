@@ -1,6 +1,6 @@
 # medicine/models/marketer.py
 from django.db import models
-from ...address.models import Address
+from address.models import Address
 
 
 class Marketer(models.Model):
