@@ -42,6 +42,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # REST Framework related apps
+
+
+    # Django Applications
+    'address',
+    'authentication',
+    'doctor',
+    'medicine',
+    'patient',
 ]
 
 MIDDLEWARE = [
