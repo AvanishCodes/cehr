@@ -7,4 +7,4 @@ from ..models import Specialization
 class SpecializationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Specialization
-        fields = ('shorthand', 'name', 'description')
+        fields = ('id', 'shorthand', 'name', 'description')

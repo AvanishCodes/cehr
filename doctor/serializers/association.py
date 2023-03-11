@@ -10,7 +10,7 @@ class AssociationSerializer(serializers.ModelSerializer):
         fields = [
             'id',
             'name',
-            'type',
+            'association_type',
             'description',
         ]
 
