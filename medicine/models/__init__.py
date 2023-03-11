@@ -11,4 +11,5 @@ __all__ = (
     Molecule,
     MarketableMedicine,
     MedicineComposition,
+    FormulaMedicine,
 )
