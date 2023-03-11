@@ -1,15 +1,15 @@
-# doctor/models/association.py
+# doctor/models/doctorgroup.py
 from django.db import models
 
-from .enums import AsssociationType
+from address.models import Address
 
 
-class Association(models.Model):
+class DoctorGroup(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
-    association_type = models.CharField(
-        max_length=7,
-        choices=AsssociationType.choices,
+    address = models.ForeignKey(
+        Address,
+        on_delete=models.CASCADE,
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
