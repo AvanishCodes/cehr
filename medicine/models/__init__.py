@@ -2,7 +2,7 @@
 from .marketer import Marketer
 from .molecule import Molecule
 from .marketable_medicine import MarketableMedicine
-from .formula_medicine import FormulaMedicine
+from .formula_medicine import Formula
 from .composition import MedicineComposition
 
 
@@ -11,5 +11,5 @@ __all__ = (
     Molecule,
     MarketableMedicine,
     MedicineComposition,
-    FormulaMedicine,
+    Formula,
 )

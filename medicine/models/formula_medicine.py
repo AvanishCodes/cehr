@@ -2,7 +2,7 @@
 from django.db import models
 from .enums import MedicineType
 
-class FormulaMedicine(models.Model):
+class Formula(models.Model):
     shorthand = models.CharField(max_length=20, blank=True, null=True)
     name = models.CharField(max_length=200)
     type = models.CharField(
@@ -19,5 +19,5 @@ class FormulaMedicine(models.Model):
 
 
 __all__ = (
-    FormulaMedicine,
+    Formula,
 )
