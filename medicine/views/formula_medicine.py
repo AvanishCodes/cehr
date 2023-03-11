@@ -15,3 +15,9 @@ class FormulaMedicineListCreate(generics.ListCreateAPIView):
 class FormulaMedicineDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = FormulaMedicine.objects.all()
     serializer_class = FormulaMedicineSerializer
+
+
+__all__ = (
+    FormulaMedicineListCreate,
+    FormulaMedicineDetail,
+)
