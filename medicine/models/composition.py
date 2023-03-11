@@ -1,13 +1,13 @@
 # medicine/models/composition.py
 from django.db import models
 from .enums import CompositionType, UnitType
-from .marketable_medicine import MarketableMedicine
+from .formula_medicine import FormulaMedicine
 from .molecule import Molecule
 
 
 class MedicineComposition(models.Model):
     formula_medicine = models.ForeignKey(
-        MarketableMedicine,
+        FormulaMedicine,
         on_delete=models.CASCADE,
     )
     molecule = models.ForeignKey(
@@ -27,4 +27,4 @@ class MedicineComposition(models.Model):
     )
 
     def __str__(self):
-        return f'{self.quantity} {self.unit}'
+        return f'{self.formula_medicine} {self.quantity} {self.unit}'
