@@ -26,13 +26,5 @@ class MedicineComposition(models.Model):
         default=UnitType.MG,
     )
 
-    class Meta:
-        constraints = [
-            models.UniqueConstraint(
-                fields=['formula_medicine', 'molecule'],
-                name='unique_composition_type',
-            ),
-        ]
-
     def __str__(self):
         return f'{self.quantity} {self.unit}'
