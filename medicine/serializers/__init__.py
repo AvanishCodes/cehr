@@ -1,3 +1,5 @@
-__all__ = (
+from .molecule import MoleculeSerializer
 
+__all__ = (
+    MoleculeSerializer,
 )
