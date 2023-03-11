@@ -6,7 +6,7 @@ from .molecule import Molecule
 
 
 class MedicineComposition(models.Model):
-    medicine = models.ForeignKey(
+    formula_medicine = models.ForeignKey(
         MarketableMedicine,
         on_delete=models.CASCADE,
     )
@@ -29,7 +29,7 @@ class MedicineComposition(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=['medicine', 'type'],
+                fields=['formula_medicine', 'molecule'],
                 name='unique_composition_type',
             ),
         ]

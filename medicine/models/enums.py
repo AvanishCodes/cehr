@@ -25,6 +25,8 @@ class CompositionType(models.TextChoices):
     WV = 'WV', _('Weight to Volume')
     VW = 'VW', _('Volume to Weight')
     VV = 'VV', _('Volume to Volume')
+    W = 'W', _('Weight')
+    V = 'V', _('Volume')
 
 
 class UnitType(models.TextChoices):
