@@ -7,7 +7,6 @@ from ..models import Doctor
 from ..serializers import DoctorSerializer
 from ..filters import DoctorFilter
 from ..pagination import DefaultPagination
-from ..filters import DoctorFilter
 
 
 class DoctorListCreate(generics.ListCreateAPIView):
