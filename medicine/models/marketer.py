@@ -12,3 +12,7 @@ class Marketer(models.Model):
         null=True,
         default=None,
     )
+
+
+    def __str__(self):
+        return self.name
