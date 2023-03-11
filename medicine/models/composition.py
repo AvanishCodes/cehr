@@ -1,13 +1,13 @@
 # medicine/models/composition.py
 from django.db import models
 from .enums import CompositionType, UnitType
-from .medicine import Medicine
+from .marketable_medicine import MarketableMedicine
 from .molecule import Molecule
 
 
 class MedicineComposition(models.Model):
     medicine = models.ForeignKey(
-        Medicine,
+        MarketableMedicine,
         on_delete=models.CASCADE,
     )
     molecule = models.ForeignKey(
