@@ -61,5 +61,6 @@ urlpatterns = [
     # Django Application Modules
     path('address/', include('address.urls')),
     path('doctor/', include('doctor.urls')),
+    path('medicine/', include('medicine.urls')),
 
 ]
