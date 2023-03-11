@@ -7,6 +7,8 @@ from .views import (
     MolecularDetail,
     MarketerListCreate,
     MarketerDetail,
+    FormulaMedicineListCreate,
+    FormulaMedicineDetail,
 )
 
 urlpatterns = [
@@ -15,4 +17,8 @@ urlpatterns = [
 
     path('marketers/', MarketerListCreate.as_view(), name='marketer-list'),
     path('marketers/<int:pk>/', MarketerDetail.as_view(), name='marketer-detail'),
+
+    path('formulas/', FormulaMedicineListCreate.as_view(), name='formula-list'),
+    path('formulas/<int:pk>/', FormulaMedicineDetail.as_view(), name='formula-detail'),
+    
 ]
