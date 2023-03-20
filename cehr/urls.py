@@ -22,6 +22,8 @@ from rest_framework.schemas import get_schema_view
 from drf_yasg.views import get_schema_view as gsv
 from drf_yasg import openapi
 
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 schema_view = gsv(
     openapi.Info(
         title="Community EHR Solutions",
@@ -60,7 +62,11 @@ urlpatterns = [
 
     # Django Application Modules
     path('address/', include('address.urls')),
+    path('auth/', include('authentication.urls')),
     path('doctor/', include('doctor.urls')),
     path('medicine/', include('medicine.urls')),
 
 ]
+
+
+urlpatterns += staticfiles_urlpatterns()
