@@ -11,4 +11,4 @@ class State(models.Model):
     shorthand = models.CharField(max_length=10, null=True)
 
     def __str__(self):
-        return f'{self.shorthand} - {self.name}'
+        return f'{self.shorthand} - {self.name} - {self.country.name}'
