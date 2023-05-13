@@ -27,6 +27,9 @@ class Doctor(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    @property
+    def name(self) -> str:
+        return f'{self.first_name} {self.middle_name} {self.last_name}'
 
     def __str__(self):
-        return f'Dr. {self.first_name} {self.last_name}, {self.highest_qualification}'
+        return f'Dr. {self.name}, {self.highest_qualification}'

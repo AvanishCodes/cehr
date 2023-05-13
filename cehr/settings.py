@@ -37,7 +37,6 @@ ALLOWED_HOSTS = [
     'ec2-65-2-11-63.ap-south-1.compute.amazonaws.com',
 ]
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -60,16 +59,18 @@ INSTALLED_APPS = [
     'doctor',
     'medicine',
     'patient',
+    'prescription',
+    'inventory',
 ]
 
 SWAGGER_SETTINGS = {
-   'SECURITY_DEFINITIONS': {
+    'SECURITY_DEFINITIONS': {
         'Bearer': {
             'type': 'apiKey',
             'name': 'Authorization',
             'in': 'header'
         }
-   }
+    }
 }
 
 REST_FRAMEWORK = {
@@ -112,7 +113,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'cehr.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
@@ -126,7 +126,6 @@ DATABASES = {
         'PORT': env('MYSQL_PORT'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -146,7 +145,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -157,7 +155,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
