@@ -28,18 +28,6 @@ class StateRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = StateSerializer
 
 
-# class StateFilter(generics.ListAPIView):
-#     serializer_class = StateSerializer
-#
-#     def get_queryset(self):
-#
-#         country = self.kwargs['country']
-#         if country:
-#             return State.objects.filter(country=country)
-#         else:
-#             return State.objects.all()
-
-
 class StateManageView(BaseManageView):
     VIEWS_BY_METHOD = {
         'GET': StateList.as_view,

@@ -28,21 +28,6 @@ class CityRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CitySerializer
 
 
-# add  a GET api for filtering cities by state/country
-
-
-# class CityFilter(generics.ListAPIView):
-#     serializer_class = CitySerializer
-#
-#     def get_queryset(self):
-#
-#         state = self.kwargs['state']
-#         if state:
-#             return City.objects.filter(state=state)
-#         else:
-#             return City.objects.all()
-
-
 class CityManageView(BaseManageView):
     VIEWS_BY_METHOD = {
         'GET': CityList.as_view,
