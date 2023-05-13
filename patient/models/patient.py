@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Patient(models.Model):
     first_name = models.CharField(max_length=50)
-    middle_name = models.CharField(max_length=50)
+    middle_name = models.CharField(max_length=50, null=True, default=None, blank=True, )
     last_name = models.CharField(max_length=50)
     user = models.OneToOneField(
         User,
@@ -16,7 +16,8 @@ class Patient(models.Model):
 
     @property
     def name(self) -> str:
-        return f'{self.first_name} {self.middle_name} {self.last_name}'
+        name = self.first_name + ' ' + self.last_name
+        return name
 
     def __str__(self):
         return f'{self.name}'
