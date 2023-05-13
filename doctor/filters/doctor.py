@@ -12,7 +12,7 @@ class DoctorFilter(FilterSet):
     user__email = CharFilter(field_name='user__email', lookup_expr='icontains')
     specialization__name = CharFilter(field_name='specialization__name', lookup_expr='icontains')
     highest_qualification__name = CharFilter(field_name='highest_qualification__name', lookup_expr='icontains')
-    
+
     class Meta:
         model = Doctor
         fields = (
@@ -25,6 +25,7 @@ class DoctorFilter(FilterSet):
             'highest_qualification__name',
         )
 
+
 __all__ = (
-    DoctorFilter,
+    'DoctorFilter',
 )

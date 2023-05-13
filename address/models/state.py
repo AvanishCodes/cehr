@@ -2,6 +2,7 @@
 from django.db import models
 from .country import Country
 
+
 class State(models.Model):
     name = models.CharField(max_length=50)
     country = models.ForeignKey(

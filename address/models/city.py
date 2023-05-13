@@ -11,12 +11,12 @@ class City(models.Model):
     state = models.ForeignKey(
         State,
         on_delete=models.CASCADE,
+        null=True,
     )
     country = models.ForeignKey(
         Country,
         on_delete=models.CASCADE,
     )
 
-    
     def __str__(self):
         return f'{self.name} - {self.state.name} - {self.country.name}'

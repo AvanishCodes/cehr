@@ -15,9 +15,7 @@ class DoctorListCreate(generics.ListCreateAPIView):
     filter_class = DoctorFilter
     pagination_class = DefaultPagination
     filter_backends = (filters.DjangoFilterBackend,)
-    filter_class = DoctorFilter
-    
-    
+
 
 class DoctorDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Doctor.objects.all()

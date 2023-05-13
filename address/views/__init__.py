@@ -1,18 +1,19 @@
 from .address import AddressCreateList, AddressRetrieveUpdateDestroy
-from .city import CityCreateList, CityRetrieveUpdateDestroy, CityFilter
-from .state import StateCreateList, StateRetrieveUpdateDestroy, StateFilter
-from .country import CountryCreateList, CountryRetrieveUpdateDestroy
-
+from .city import CityManageView, CityRetrieveUpdateDestroy, CityFilter
+from .state import StateManageView, StateRetrieveUpdateDestroy, StateFilter
+from .country import CountryCreate, CountryRetrieve, CountryList, CountryManageView
 
 __all__ = (
     AddressCreateList,
     AddressRetrieveUpdateDestroy,
-    CityCreateList,
+    CityManageView,
     CityRetrieveUpdateDestroy,
-    StateCreateList,
+    StateManageView,
     StateRetrieveUpdateDestroy,
-    CountryCreateList,
-    CountryRetrieveUpdateDestroy,
+    CountryCreate,
+    CountryList,
+    CountryManageView,
+    CountryRetrieve,
     StateFilter,
     CityFilter,
 )
