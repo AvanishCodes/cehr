@@ -10,12 +10,12 @@ class City(models.Model):
     name = models.CharField(max_length=200)
     state = models.ForeignKey(
         State,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
         null=True,
     )
     country = models.ForeignKey(
         Country,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
     )
 
     def __str__(self):

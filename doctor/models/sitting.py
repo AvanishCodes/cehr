@@ -9,11 +9,11 @@ from .venue import Venue
 class Sitting(models.Model):
     doctor = models.ForeignKey(
         Doctor,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
     )
     venue = models.ForeignKey(
         Venue,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
     )
     day = models.CharField(
         max_length=3,

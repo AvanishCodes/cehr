@@ -8,11 +8,11 @@ from .molecule import Molecule
 class MedicineComposition(models.Model):
     formula = models.ForeignKey(
         Formula,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
     )
     molecule = models.ForeignKey(
         Molecule,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
     )
     type = models.CharField(
         max_length=3,

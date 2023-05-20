@@ -8,11 +8,11 @@ from .association import Association
 class Venue(models.Model):
     address = models.ForeignKey(
         Address,
-        on_delete=models.CASCADE
+        on_delete=models.RESTRICT
     )
     owner_group = models.ForeignKey(
         Association,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
         null=True,
     )
     created_at = models.DateTimeField(auto_now_add=True)

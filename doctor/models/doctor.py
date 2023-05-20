@@ -12,16 +12,16 @@ class Doctor(models.Model):
     last_name = models.CharField(max_length=50)
     user = models.OneToOneField(
         User,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
     )
     reg_no = models.CharField(max_length=50)
     specialization = models.ForeignKey(
         Specialization,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
     )
     highest_qualification = models.ForeignKey(
         Qualification,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
     )
 
     created_at = models.DateTimeField(auto_now_add=True)

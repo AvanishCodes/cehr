@@ -7,7 +7,7 @@ class State(models.Model):
     name = models.CharField(max_length=50)
     country = models.ForeignKey(
         Country,
-        on_delete=models.CASCADE
+        on_delete=models.RESTRICT
     )
     shorthand = models.CharField(max_length=10, null=True)
 

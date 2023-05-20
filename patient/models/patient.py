@@ -8,7 +8,7 @@ class Patient(models.Model):
     last_name = models.CharField(max_length=50)
     user = models.OneToOneField(
         User,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
     )
 
     created_at = models.DateTimeField(auto_now_add=True)

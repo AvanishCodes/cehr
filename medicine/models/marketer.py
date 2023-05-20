@@ -8,7 +8,7 @@ class Marketer(models.Model):
     name = models.CharField(max_length=200)
     address = models.ForeignKey(
         Address,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
         null=True,
         default=None,
     )

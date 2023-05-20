@@ -14,7 +14,7 @@ class Qualification(models.Model):
     )
     specialization = models.ForeignKey(
         Specialization,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
         null=True,
     )
     description = models.TextField()

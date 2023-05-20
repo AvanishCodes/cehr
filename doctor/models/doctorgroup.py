@@ -9,7 +9,7 @@ class DoctorGroup(models.Model):
     description = models.TextField()
     address = models.ForeignKey(
         Address,
-        on_delete=models.CASCADE,
+        on_delete=models.RESTRICT,
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
