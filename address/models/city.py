@@ -12,6 +12,7 @@ class City(models.Model):
         State,
         on_delete=models.RESTRICT,
         null=True,
+        blank=True,
     )
     country = models.ForeignKey(
         Country,
@@ -19,4 +20,4 @@ class City(models.Model):
     )
 
     def __str__(self):
-        return f'{self.name} - {self.state.name} - {self.country.name}'
+        return f'{self.name} - {self.country.name}'
