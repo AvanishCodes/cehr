@@ -10,7 +10,6 @@ from .models import (
     Store,
 )
 
-
 # Register your models here.
 admin.site.register(MedicineBatch)
 admin.site.register(Bill)
@@ -20,3 +19,7 @@ admin.site.register(PackagingUnit)
 admin.site.register(MedicineBatchSale)
 admin.site.register(StoreStockQuantity)
 admin.site.register(Store)
+
+admin.site.site_title = "CEHR"
+admin.site.site_header = "CEHR"
+admin.site.index_title = "Admin Panel"
